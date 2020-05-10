@@ -1,0 +1,6 @@
+# Screen density
+ro.sf.lcd_density=420
+ro.arch=exynos7885
+ro.chipname=exynos7885
+
+
