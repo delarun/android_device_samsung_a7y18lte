@@ -84,4 +84,4 @@ TARGET_OTA_ASSERT_DEVICE := a7y18lte
 #Ignore Missing Dependencies
 ALLOW_MISSING_DEPENDENCIES=true
 
-LZMA_RAMDISK_TARGETS := recovery //thanks alexax66
+LZMA_RAMDISK_TARGETS := recovery #thanks alexax66
