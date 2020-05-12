@@ -1,34 +1,24 @@
 # Android fstab file.
+# mount point  		fstype	device 			device2				flags
 
-# mount point  fstype device   
-/boot			emmc		/dev/block/platform/13500000.dwmmc0/by-name/BOOT
-/cache			ext4		/dev/block/platform/13500000.dwmmc0/by-name/CACHE	
-/data			ext4		/dev/block/platform/13500000.dwmmc0/by-name/USERDATA	length=-16384
-/recovery		emmc		/dev/block/platform/13500000.dwmmc0/by-name/RECOVERY	flags=display="recovery";backup=1	
-/system		ext4		/dev/block/platform/13500000.dwmmc0/by-name/SYSTEM	
-/vendor		ext4		/dev/block/platform/13500000.dwmmc0/by-name/VENDOR		 flags=backup=1;display="vendor"
-/efs			emmc		/dev/block/platform/13500000.dwmmc0/by-name/EFS flags=display="EFS";backup=1	
-/cpefs			emmc		/dev/block/platform/13500000.dwmmc0/by-name/CPEFS flags=backup=1;subpartitionof=/efs
-/radio			emmc		/dev/block/platform/13500000.dwmmc0/by-name/RADIO flags=display="modem";backup=1	
-/misc			emmc		/dev/block/platform/13500000.dwmmc0/by-name/MISC flags=display="misc";backup=1
-/bota0			emmc		/dev/block/platform/13500000.dwmmc0/by-name/BOTA0 flags=display="BOTA0";backup=1
-/bota1			emmc		/dev/block/platform/13500000.dwmmc0/by-name/BOTA1 flags=display="BOTA1";backup=1
-/cm			emmc		/dev/block/platform/13500000.dwmmc0/by-name/CM flags=display="CM";backup=1
-/dtbo			emmc		/dev/block/platform/13500000.dwmmc0/by-name/DTBO flags=display="DTBO";backup=1
-/hidden		emmc		/dev/block/platform/13500000.dwmmc0/by-name/HIDDEN flags=display="HIDDEN";backup=1
-/m9kefs1		emmc		/dev/block/platform/13500000.dwmmc0/by-name/m9kefs1 flags=display="M9KEFS1";backup=1
-/m9kefs2		emmc		/dev/block/platform/13500000.dwmmc0/by-name/m9kefs2 flags=display="M9KEFS2";backup=1
-/m9kefs3		emmc		/dev/block/platform/13500000.dwmmc0/by-name/m9kefs3 flags=display="M9kEFS3";backup=1
-/na			emmc		/dev/block/platform/13500000.dwmmc0/by-name/NA flags=display="NA";backup=1
-/nad_fw		emmc		/dev/block/platform/13500000.dwmmc0/by-name/NAD_FW flags=display="NAD_FW";backup=1
-/nad_refer		emmc		/dev/block/platform/13500000.dwmmc0/by-name/NAD_REFER flags=display="NAD_REFER";backup=1
-/omr			emmc		/dev/block/platform/13500000.dwmmc0/by-name/OMR flags=display="OMR";backup=1
-/param		emmc		/dev/block/platform/13500000.dwmmc0/by-name/PARAM flags=display="PARAM";backup=1
-/persistent		emmc		/dev/block/platform/13500000.dwmmc0/by-name/PERSISTENT flags=display="PERSISTENT";backup=1
-/reserved2		emmc		/dev/block/platform/13500000.dwmmc0/by-name/RESERVED2 flags=display="RESERVED2";backup=1
-/steady		emmc		/dev/block/platform/13500000.dwmmc0/by-name/STEADY flags=display="STEADY";backup=1
-/cp_debug		emmc		/dev/block/platform/13500000.dwmmc0/by-name/CP_DEBUG flags=display="cp_debug";backup=1
-/odm			ext4		/dev/block/platform/13500000.dwmmc0/by-name/ODM		flags=backup=1;display="odm"
+/boot			emmc	/dev/block/platform/13500000.dwmmc0/by-name/BOOT
+/cache			ext4	/dev/block/platform/13500000.dwmmc0/by-name/CACHE	
+/data			ext4	/dev/block/platform/13500000.dwmmc0/by-name/USERDATA	length=-16384
+/recovery		emmc	/dev/block/platform/13500000.dwmmc0/by-name/RECOVERY	flags=display="recovery";backup=1	
+/system_root		ext4	/dev/block/platform/13500000.dwmmc0/by-name/SYSTEM	
+/system_image           emmc    /dev/block/platform/13500000.dwmmc0/by-name/SYSTEM
+/efs			emmc	/dev/block/platform/13500000.dwmmc0/by-name/EFS		flags=display="EFS";backup=1	
+/cpefs			emmc	/dev/block/platform/13500000.dwmmc0/by-name/CPEFS	flags=backup=1;subpartitionof=/efs
+#/m9kefs1                emmc    /dev/block/platform/13500000.dwmmc0/by-name/m9kefs1     flags=backup=1;subpartitionof=/efs
+#/m9kefs2                emmc    /dev/block/platform/13500000.dwmmc0/by-name/m9kefs2     flags=backup=1;subpartitionof=/efs
+#/m9kefs3                emmc    /dev/block/platform/13500000.dwmmc0/by-name/m9kefs3     flags=backup=1;subpartitionof=/efs
+/radio			emmc	/dev/block/platform/13500000.dwmmc0/by-name/RADIO	flags=display="modem";backup=1	
+/misc			emmc	/dev/block/platform/13500000.dwmmc0/by-name/MISC	flags=display="misc";backup=1
+/cp_debug		emmc	/dev/block/platform/13500000.dwmmc0/by-name/CP_DEBUG	flags=display="cp_debug";backup=1
+/vendor			ext4	/dev/block/platform/13500000.dwmmc0/by-name/VENDOR	flags=backup=1;display="vendor"
+/vendor_image		emmc	/dev/block/platform/13500000.dwmmc0/by-name/VENDOR	flags=backup=1;display="vendor_image"
+/odm			ext4	/dev/block/platform/13500000.dwmmc0/by-name/ODM		flags=backup=1;display="odm"
+/odm_image		emmc	/dev/block/platform/13500000.dwmmc0/by-name/ODM		flags=backup=1;display="odm_image"
 
-/external_sdcard 	auto          /dev/block/mmcblk1p1      /dev/block/mmcblk1   flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg         auto       /dev/block/sda1	/dev/block/sda	flags=display="USB-OTG";storage;wipeingui;removable
+/external_sdcard 	auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg         	auto	/dev/block/sda1		/dev/block/sda			flags=display="USB-OTG";storage;wipeingui;removable
