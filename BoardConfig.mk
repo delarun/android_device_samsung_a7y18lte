@@ -55,6 +55,7 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 # TWRP specific build flags
 AB_OTA_UPDATER := true
